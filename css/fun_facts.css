@@ -1,0 +1,153 @@
+/* Base configuration and layout */
+/* ------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --primary-text: #222831;
+  --primary-light-color: #393e46;
+  --accent-color: #00adb5;
+  --background-color: #eeeeee;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-rows: 7rem 1.5fr min-content;
+  background-color: var(--background-color);
+  color: var(--primary-text);
+}
+
+/* Navbar */
+/* ------------------------------------------------------ */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-text);
+}
+.navbar__header {
+  color: var(--background-color);
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  font-size: 3.6rem;
+  padding-left: 2rem;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.navbar__links li a {
+  color: var(--accent-color);
+  font-size: 2rem;
+  padding: 2rem;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.navbar__links li:hover a {
+  background-color: var(--primary-light-color);
+}
+/* ------------------------------------------------------ */
+
+/* Main content */
+/* ------------------------------------------------------ */
+.content {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 12rem;
+}
+.content__favorite__book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.content__favorite__book__description {
+  inline-size: 75rem;
+  overflow-wrap: break-word;
+}
+.content__favorite__audio__track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.content__favorite__audio__track a {
+  transition: all 0.5s ease;
+  display: block;
+  text-decoration: none;
+  color: var(--accent-color);
+  padding: 1rem;
+}
+.content__favorite__audio__track a:hover {
+  background-color: var(--primary-light-color);
+}
+.content__favorite__book a {
+  transition: all 0.5s ease;
+  display: block;
+  text-decoration: none;
+  color: var(--accent-color);
+  padding: 1rem;
+}
+.content__favorite__book a:hover {
+  background-color: var(--primary-light-color);
+}
+.content__favorite__tv__series {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ------------------------------------------------------ */
+
+/* Footer */
+/* ------------------------------------------------------ */
+.footer {
+  display: flex;
+  align-items: start;
+
+  font-size: 2rem;
+  background-color: var(--primary-text);
+  color: var(--background-color);
+}
+.footer__contacts {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.footer__contacts li {
+  list-style-type: none;
+  padding: 1rem;
+  transition: all 0.5s ease;
+}
+.footer__contacts li:hover:not(:last-child) {
+  background-color: var(--primary-light-color);
+}
+.footer__contacts a {
+  transition: all 0.5s ease;
+
+  text-decoration: none;
+  color: var(--accent-color);
+}

@@ -1,0 +1,121 @@
+/* Base configuration and layout */
+/* ------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --primary-text: #222831;
+  --primary-light-color: #393e46;
+  --accent-color: #00adb5;
+  --background-color: #eeeeee;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-rows: 7rem 1.5fr min-content;
+  background-color: var(--background-color);
+  color: var(--primary-text);
+}
+
+/* Navbar */
+/* ------------------------------------------------------ */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-text);
+}
+.navbar__header {
+  color: var(--background-color);
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  font-size: 3.6rem;
+  padding-left: 2rem;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.navbar__links li a {
+  color: var(--accent-color);
+  font-size: 2rem;
+  padding: 2rem;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.navbar__links li:hover a {
+  background-color: var(--primary-light-color);
+}
+/* ------------------------------------------------------ */
+
+/* Main content */
+/* ------------------------------------------------------ */
+.content {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-rows: repeat(0.2fr, 5);
+  justify-content: center;
+}
+.content__contact__information__list li {
+  list-style: none;
+}
+.content__professional__experience {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.content__educational__experience__table {
+  border-collapse: collapse; /* Merges adjacent cell borders */
+}
+.content__educational__experience__table th,
+td {
+  padding: 0.8rem;
+  border: 2px solid var(--primary-text);
+}
+/* ------------------------------------------------------ */
+
+/* Footer */
+/* ------------------------------------------------------ */
+.footer {
+  display: flex;
+  align-items: start;
+
+  font-size: 2rem;
+  background-color: var(--primary-text);
+  color: var(--background-color);
+}
+.footer__contacts {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.footer__contacts li {
+  list-style-type: none;
+  padding: 1rem;
+  transition: all 0.5s ease;
+}
+.footer__contacts li:hover:not(:last-child) {
+  background-color: var(--primary-light-color);
+}
+.footer__contacts a {
+  transition: all 0.5s ease;
+
+  text-decoration: none;
+  color: var(--accent-color);
+}
