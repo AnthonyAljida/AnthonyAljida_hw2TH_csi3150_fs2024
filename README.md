@@ -1,2 +1,1 @@
 # AnthonyAljida_hw1TH_csi3150_fs2024
-# AnthonyAljida_hw2TH_csi3150_fs2024
